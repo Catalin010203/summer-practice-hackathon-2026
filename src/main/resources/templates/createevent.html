@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title> Create event </title>
+</head>
+
+<form th:action="@{/createevent}" method="post">
+
+    <input type="text" name="location" placeholder="Location"><br>
+
+    <input type="datetime-local" name="dateTime"><br>
+
+    <input type="text" name="sport" placeholder="Sport"><br>
+
+    <input type="text" name="description" placeholder="Description"><br>
+
+    <input type="number" name="price" placeholder="Price"><br>
+
+    <button type="submit">Create</button>
+
+</form>
+
+
+</body>
+
+</html>
