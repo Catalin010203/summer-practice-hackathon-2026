@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Authentification </title>
+</head>
+
+<body>
+<h1> Authentification </h1>
+
+<form th:action = "@{/authentificationSucces}" method="post">
+
+    <input type="Text" name="firstName" th:value="${firstName}"
+           placeholder="First Name"> <br>
+    <input type="Text" name="lastName" th:value="${lastName}"
+        placeholder="Last Name"> <br>
+    <input type="Text" name="username" th:value="${userName}"
+           placeholder="Username"> <br>
+    <input type="Text" name="email" th:value="${email}"
+           placeholder="Enter Email"> <br>
+    <input type="Text" th:value="${confirmEmail}"
+           placeholder="Confirm Email"> <br>
+    <input type="Password" name="password" th:value="${password}"
+        placeholder="Password"> <br>
+    <input type="Password" name="confirmPassword" th:value="${confirmPassword}"
+        placeholder="Confirm Password"> <br>
+    <input type="submit" class="submit"/>
+
+</form>
+
+</body>

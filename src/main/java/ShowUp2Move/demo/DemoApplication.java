@@ -1,5 +1,6 @@
 package ShowUp2Move.demo;
 
+import ShowUp2Move.demo.entity.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

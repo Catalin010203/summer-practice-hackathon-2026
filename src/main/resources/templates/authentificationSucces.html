@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Authentification </title>
+</head>
+
+<body>
+<h1> Authentification </h1>
+
+<form th:action = "@{/login}" method="get">
+
+<input type="Text" name="description" th:value="${description}"
+       placeholder="Describe yourself"> <br>
+<input type="Text" name="skills" th:value="${skills}"
+       placeholder="Skills"> <br>
+    <button type="button" onclick="addSkill()" class="btn btn-secondary">
+        Adaugă skill
+    </button> <br>
+<input type="Text" name="interests" th:value="${interests}"
+        placeholder="Interests"> <br>
+    <input type="submit" class="submit"/>
+</form>
+The student is confirmed: <span th:text="${person.firstName} + ' ' + ${person.lastName}" class="name"/>
+
+</body>
