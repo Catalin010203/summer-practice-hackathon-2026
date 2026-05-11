@@ -8,5 +8,16 @@
 
 <body>
 <h1> Event Page </h1>
+<div th:each="event : ${events}">
+
+    <p><b>Location:</b> <span th:text="${event.location}"></span></p>
+    <p><b>Sport:</b> <span th:text="${event.sport}"></span></p>
+    <p><b>Description:</b> <span th:text="${event.description}"></span></p>
+    <p><b>Date:</b> <span th:text="${event.dateTime}"></span></p>
+    <p><b>Price:</b> <span th:text="${event.price}"></span></p>
+
+    <hr>
+
+</div>
 
 </body>

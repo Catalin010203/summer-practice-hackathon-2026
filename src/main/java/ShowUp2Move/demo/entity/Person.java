@@ -1,6 +1,8 @@
 package ShowUp2Move.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,8 +11,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Getter
-@Setter
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +18,10 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private String userName;
+    private String username;
     private String password;
+    @Email(message = "Invalid email")
+    @NotBlank(message = "Email is required")
     private String email;
     private String description;
     private String skills;

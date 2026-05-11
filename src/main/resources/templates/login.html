@@ -3,19 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Person login </title>
+    <title>Login</title>
 </head>
 
-<form th:action = "@{/homepage}" method="get">
-    <h1> Login </h1>
-    <br>
-    <input type="Text" name="username" th:value="${userName}"
-           placeholder="Enter Username"> <br>
-    <input type="password" name="password" th:value="${password}"
-            placeholder="Enter Password"> <br>
-    <input type="submit" class="submit"/>
-</form>
+<body>
 
+<form th:action="@{/homepage}" method="get">
+    <h1>Login</h1>
+    <br>
+
+    <div th:if="${errorMessage}" style="color: red;" th:text="${errorMessage}"></div>
+    <br>
+
+    <input type="email" name="email" placeholder="Enter Email" required/> <br>
+    <input type="password" name="password" placeholder="Enter Password" required/> <br>
+    <input type="submit" value="Login"/>
+</form>
 
 </body>
 

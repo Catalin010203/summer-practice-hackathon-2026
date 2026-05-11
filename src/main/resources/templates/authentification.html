@@ -9,13 +9,13 @@
 <body>
 <h1> Authentification </h1>
 
-<form th:action = "@{/authentificationSucces}" method="post">
+<form th:action = "@{/authentification}" method="post">
 
     <input type="Text" name="firstName" th:value="${firstName}"
            placeholder="First Name"> <br>
     <input type="Text" name="lastName" th:value="${lastName}"
         placeholder="Last Name"> <br>
-    <input type="Text" name="username" th:value="${userName}"
+    <input type="Text" name="username" th:value="${username}"
            placeholder="Username"> <br>
     <input type="Text" name="email" th:value="${email}"
            placeholder="Enter Email"> <br>
@@ -25,6 +25,12 @@
         placeholder="Password"> <br>
     <input type="Password" name="confirmPassword" th:value="${confirmPassword}"
         placeholder="Confirm Password"> <br>
+    <input type="Text" name="description" th:value="${description}"
+           placeholder="Describe yourself"> <br>
+    <input type="Text" name="skills" th:value="${skills}"
+           placeholder="Skills"> <br>
+    <input type="Text" name="interests" th:value="${interests}"
+           placeholder="Interests"> <br>
     <input type="submit" class="submit"/>
 
 </form>
